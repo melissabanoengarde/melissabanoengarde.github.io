@@ -1,0 +1,92 @@
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  height: 2000px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.08fr 1.5fr 1.2fr 0.08fr;
+  grid-template-areas:
+  "header header nav nav"
+  "sidebar main main main"
+  "sidebar img1 img2 img3"
+  "footer footer footer footer";
+  grid-gap: 0.2rem;
+  background: #F9F8F4;
+
+  font-family: Open Sans, helvetica, sans-serif;
+}
+
+header {
+  background: cadetblue;
+  grid-area: header;
+
+}
+
+nav {
+  background: #f54242;
+  grid-area: nav;
+
+  padding-right: 1%;
+
+  text-align: right;
+  font-size: 30px;
+  text-transform: uppercase;
+/*
+  width: 50%;
+  align-content: flex-end;
+  position: fixed; */
+  /* padding-bottom: 0px; */
+}
+
+main {
+  background: #134ecf;
+  grid-area: main;
+}
+
+#sidebar {
+  background: #18d97c;
+  grid-area: sidebar;
+}
+
+#img1 {
+  background: #f0ff9e;
+  grid-area: img1;
+}
+
+#img2 {
+  background: #c36bf2;
+  grid-area: img2;
+}
+
+#img3 {
+  background: #f26b93;
+  grid-area: img3;
+}
+
+footer {
+  background: #ff9429;
+  grid-area: footer;
+}
+
+
+/* phone view and larger */
+@media only screen and (max-width: 600px){
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+    "nav"
+    "sidebar"
+    "main"
+    "img1"
+    "img2"
+    "img3"
+    "footer";
+  }
+}
