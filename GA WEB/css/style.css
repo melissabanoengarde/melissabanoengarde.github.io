@@ -1,0 +1,88 @@
+/* Inconsolata typeface via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Global css style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace, helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
+
+  /* background-color: #16161A; */
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  scroll-behavior: smooth;
+}
+
+#sec-1 {
+  background-color: #16161A;
+}
+
+#sec-2 {
+  background-color: #dde3dc;
+}
+
+#sketch-holder {
+  display: flex;
+
+  /* centers sketch horizontally */
+  justify-content: center;
+
+  /* centers sketch vertically */
+  align-items: center;
+}
+
+a {
+  color: #74C990;
+  text-decoration: none;
+  font-weight: 100;
+  border-bottom: 1px dotted transparent;
+  transition: border-bottom 0.5s;
+}
+
+a.info {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  /* transform-origin: 0 0; */
+  /* transform: rotate(-90deg) translate(-50%, 0); */
+}
+
+a.submission{
+  position:fixed;
+  top: 50%;
+  right: -0.1%;
+  transform: translate(50%, 0);
+}
+
+a.prompt-scroll {
+  position: fixed;
+  bottom: 10px;
+  left: 49%;
+
+  /* transform: translate(30%, 0); */
+}
+
+
+
+
+
+
+/*
+COLOURS:
+bg: #16161A
+green: #74C990
+*/
