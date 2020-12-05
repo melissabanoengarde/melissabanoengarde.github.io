@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace, helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
+
+  background-color: #f5f3eb;
+  color: #383838;
+}
+
+header.global {
+  position: fixed;
+  font-style: italic;
+  color: #51995e;
+  border-bottom: 1px dotted;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+nav.global {
+
+}
+
+a {
+  color: #51995e;
+  text-decoration: none;
+  font-weight: 100;
+  border-bottom: 1px dotted transparent;
+  transition: border-bottom 0.5s;
+}
+
+a.about {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translate(-50%, 0);
+}
+
+a.readings {
+  position:fixed;
+  top: 50%;
+  right: 10px;
+  transform-origin: 100% 0; /*top right corner*/
+  transform: rotate(90deg) translate(50%, 0);
+}
+
+a.exercise {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: rotate(180deg) translate(50%, 0);
+}
+
+a:hover {
+  border-bottom-color: #383838;
+}
+
+/* img.indexImg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  transform: translate(-50%, -50%);
+} */
+
+#mbg-footer {
+  color: grey;
+  width: 90%;
+  position: fixed;
+  bottom: 1.8%;
+  padding-left: 1%;
+}
+
+footer {
+  display: flex;
+  font-size: 10px;
+  width: 8%;
+  border: 0.2px solid lightgrey;
+  justify-content: center;
+}
+
+
+/* ========== READINGS.HTML ========== */
+
+div.r-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+section.readings {
+  margin: 11% 0 0 7%;  /* TRBL */
+}
+
+p.indexTitle {
+  padding-bottom: 7%;
+  font-size: 24px;
+}
+
+div.weekBlock {
+  padding-bottom: 6%;
+  font-size: 18px;
+}
+
+a.r-heading {
+  color: #51995e;
+}
+
+p {
+  line-height: 28px;
+}
+
+p.r-credit {
+  font-size: 15px;
+}
+
+a.r-link {
+  color: #51995e;
+  font-size: 15px;
+  transition: 1s all ease;
+}
+
+/* ========== EXERCISE.HTML ========== */
+
+div.e-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+section.exercises {
+  margin: 20% 0 0 -10%;  /* TRBL */
+
+  font-size: 18px;
+}
+
+.e-header h1 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+section.exercises a {
+
+}
