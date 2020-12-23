@@ -34,18 +34,18 @@ section {
 }
 
 #sec-2 {
-  background-color: #16161A;
-  color: #74C990;
-}
+  background-color: #dde3dc;
+  appearance: none;
+  user-select: none;
 
-#sec-2 #home {
-  position: fixed;
-  top: -50px;
-  left: 49%;
-  display: block;
-  transition: top 0.3s;
-  /* transform-origin: 0 0; */
-  /* transform: rotate(-90deg) translate(-50%, 0); */
+  display: flex;
+  font-size: 3.6vw;
+  /* text-transform: uppercase; */
+  line-height: 1;
+  height: 100vh;
+  overflow: hidden;
+  padding-left: 0.2em;
+  padding-top: 0.3em;
 }
 
 #sketch-holder {
@@ -64,12 +64,6 @@ a {
   font-weight: 100;
   border-bottom: 1px dotted transparent;
   transition: border-bottom 0.5s;
-}
-
-a.home {
-  position: fixed;
-  top: 10px;
-  left: 50%;
 }
 
 a.info {

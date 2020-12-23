@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280.236" height="800.175" viewBox="0 0 1280.236 800.175">
+  <g id="Box" transform="translate(-102.156 -80.074)">
+    <g id="Box_encadrement_" data-name="Box (encadrement)" transform="translate(102 79.937)">
+      <g id="Box_back_" data-name="Box (back)" transform="translate(100 95)" fill="none" stroke="#74c990" stroke-width="1">
+        <rect width="1081" height="580" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1080" height="579" fill="none"/>
+      </g>
+      <line id="Line_1" data-name="Line 1" x1="100" y1="95" transform="translate(0.5 0.5)" fill="none" stroke="#74c990" stroke-width="1"/>
+      <line id="Line_2" data-name="Line 2" y1="95" x2="98" transform="translate(1181.5 0.5)" fill="none" stroke="#74c990" stroke-width="1"/>
+      <line id="Line_3" data-name="Line 3" x2="98.5" y2="124.5" transform="translate(1181.5 675.5)" fill="none" stroke="#74c990" stroke-width="1"/>
+      <line id="Line_4" data-name="Line 4" x1="99.938" y2="124.5" transform="translate(0.563 675.5)" fill="none" stroke="#74c990" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

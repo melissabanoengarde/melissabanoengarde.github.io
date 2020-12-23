@@ -129,6 +129,32 @@ a.r-link {
   transition: 1s all ease;
 }
 
+
+/* ========== READINGSW123.HTML ========== */
+
+h1.reflection {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+section.reflection {
+  padding: 5%; /*TRBL*/
+  height: 10vh;
+
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-gap: 2rem;
+}
+
+article.para {
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+
+
 /* ========== EXERCISE.HTML ========== */
 
 div.e-container {
@@ -149,5 +175,5 @@ section.exercises {
 }
 
 section.exercises a {
-
+  line-height: 24px;
 }

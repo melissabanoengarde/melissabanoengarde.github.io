@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GA</title>
+  <!-- CSS stylesheet(s) -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Library script(s) -->
+  <script src="js/libraries/p5.min.js"></script>
+  <script src="js/libraries/p5.sound.min.js"></script>
+  <script src="js/GA-globe.js"></script>
+
+  <script>
+      var leading = 72
+      var wheel = 0
+      var offset = 0
+      var lastOffset = 0
+      var lastY = 0
+      var title = document.title + ' '
+
+      var position = 0
+
+      function tickTitle() {
+        document.title = title.substring(position, title.length) + title.substring(0, position)
+        position++
+
+        if(position > title.length) position = 0
+      }
+
+      // var x = y = z = lastX = lastY = lastZ = 0
+      //
+      // window.addEventListener('devicemotion', function(event) {
+      //   x = event.accelerationIncludingGravity.x
+      //   y = event.accelerationIncludingGravity.y
+      //   z = event.accelerationIncludingGravity.z
+      //
+      //   var deltaX = lastX - x
+      //   var deltaY = lastY - y
+      //   var deltaZ = lastZ - z
+      //
+      //   var deltaA = Math.max(deltaX, deltaY, deltaZ)
+      //
+      //   if(Math.abs(deltaA) > 0.2) onOffset()
+      //
+      //   lastX = x
+      //   lastY = y
+      //   lastZ = z
+      // })
+
+      window.addEventListener('mousewheel', function(event) {
+        event.preventDefault()
+        wheel += event.deltaY
+
+        offset = Math.floor((wheel / leading)) * leading
+
+        if(lastOffset !== offset) onOffset(event.deltaY > 0)
+
+        lastOffset = offset
+      })
+
+
+      function onOffset(up) {
+        tickTitle()
+
+        Array.from(document.querySelectorAll('.col')).forEach(function(el, i) {
+          var lines = el.innerHTML.trim().split('\n')
+
+          if(i % 2 === (up ? 0 : 1)) {
+            lines.push(lines.shift())
+          } else {
+            lines.unshift(lines.pop())
+          }
+
+          el.innerHTML = lines.join('\n')
+        })
+      }
+    </script>
+
+</head>
+<body>
+
+    <section id="sec-1">
+      <!-- Logo -->
+      <div id="logo"></div>
+
+      <!-- Left  -->
+      <a href="info.html" class="info">
+        <img src="assets/icons/info-link.png" width="70%" alt="info-button">
+      </a>
+
+      <!-- Right -->
+      <a href="submission.html" class="submission">
+        <img src="assets/icons/submission-link.png" width="30%" alt="submission-button">
+      </a>
+
+      <!-- Bottom -->
+      <a href="#sec-2" class="prompt-scroll">
+        <img src="assets/icons/promtp link.png" width="30%" alt="prompt-down-button" class="promtScroll prompt-bounce">
+      </a>
+
+      <!-- Center: GA globe js -->
+      <div id="sketch-holder"></div>
+
+    </section>
+
+    <section id="sec-2">
+
+      <h1>Section 2</h1>
+      <div class="col">
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+     <br />
+     Book&nbsp;<br />
+     Coffee&nbsp;<br />
+     Print&nbsp;<br />
+     Work&nbsp;<br />
+   </div>
+
+   <div class="col">
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     Shop&nbsp;<br />
+     <br />
+     Shop&nbsp;<br />
+   </div>
+
+   <div class="col">
+     <br />
+     <br />
+     225&nbsp;<br />
+     Queensberry&nbsp;<br />
+     St,&nbsp;<br />
+     Carlton&nbsp;<br />
+     3053&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     <br />
+     225&nbsp;<br />
+     Queensberry&nbsp;<br />
+     St,&nbsp;<br />
+     <br />
+     Carlton&nbsp;<br />
+     3053&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     225&nbsp;<br />
+     Queensberry&nbsp;<br />
+     St,&nbsp;<br />
+     Carlton&nbsp;<br />
+     <br />
+     3053&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     <br />
+     225&nbsp;<br />
+     Queensberry&nbsp;<br />
+     <br />
+     St,&nbsp;<br />
+     Carlton&nbsp;<br />
+     3053&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     <br />
+     225&nbsp;<br />
+     Queensberry&nbsp;<br />
+     St,&nbsp;<br />
+     <br />
+     Carlton&nbsp;<br />
+     3053&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     225&nbsp;<br />
+     Queensberry&nbsp;<br />
+     St,&nbsp;<br />
+     Carlton&nbsp;<br />
+     <br />
+     3053&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     <br />
+     225&nbsp;<br />
+     Queensberry&nbsp;<br />
+     <br />
+     St,&nbsp;<br />
+     Carlton&nbsp;<br />
+     3053&nbsp;<br />
+   </div>
+
+   <div class="col">
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     <br />
+     Coffee&nbsp;<br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     Coffee&nbsp;<br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     <br />
+     Coffee&nbsp;<br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     Coffee&nbsp;<br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Everyday&nbsp;<br />
+     Coffee&nbsp;<br />
+     <br />
+   </div>
+
+   <div class="col">
+     Perimeter&nbsp;<br />
+     Books&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Perimeter&nbsp;<br />
+     Books&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Perimeter&nbsp;<br />
+     <br />
+     <br />
+     Books&nbsp;<br />
+     <br />
+     Perimeter&nbsp;<br />
+     Books&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Perimeter&nbsp;<br />
+     <br />
+     <br />
+     Books&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Books&nbsp;<br />
+     <br />
+     Perimeter&nbsp;<br />
+     Books&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Perimeter&nbsp;<br />
+     <br />
+     <br />
+     Books&nbsp;<br />
+     <br />
+     Perimeter&nbsp;<br />
+     Books&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Perimeter&nbsp;<br />
+     <br />
+     <br />
+     Books&nbsp;<br />
+     <br />
+     Perimeter&nbsp;<br />
+     Books&nbsp;<br />
+     <br />
+     <br />
+     <br />
+     Perimeter&nbsp;<br />
+     <br />
+     <br />
+     Books&nbsp;<br />
+     <br />
+   </div>
+    </section>
+
+
+
+</body>
+</html>

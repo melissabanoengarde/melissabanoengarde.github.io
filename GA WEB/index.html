@@ -14,8 +14,13 @@
 <body>
 
     <section id="sec-1">
+      <!-- Logo -->
+      <div id="logo"></div>
+
       <!-- Left  -->
-      <a href="info.html" class="info">i</a>
+      <a href="info.html" class="info">
+        <img src="assets/icons/info-link.png" width="70%" alt="info-button">
+      </a>
 
       <!-- Right -->
       <a href="submission.html" class="submission">
@@ -32,11 +37,30 @@
 
     </section>
 
+
     <section id="sec-2">
-      <h1>Section 2</h1>
+
+      <!-- Logo ICON -->
+      <a href="index.html" id="home">
+        <img src="assets/icons/GA-icon.png" width="20%" alt="home-button">
+      </a>
+
+      <h1>... No Submissions Yet!</h1>
     </section>
 
+    <!-- JavaScript -->
+    <!-- logo icon slides down when the user scrolls 200px down -->
+    <script>
+    window.onscroll = function() {scrollFunction()};
 
+    function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("home").style.top = "0";
+      } else {
+        document.getElementById("home").style.top = "-50px";
+      }
+    }
+    </script>
 
 </body>
 </html>
