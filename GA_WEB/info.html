@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Info</title>
+</head>
+<body>
+
+  <!-- GLOBAL LAYOUT/BUTTONS -->
+    <!-- Top -->
+    <a href="index.html" class="home">
+      <img src="assets/icons/GA-icon.png" width="20%" alt="home-button">
+    </a>
+    
+    <!-- Left  -->
+    <a href="info.html" class="info">
+      <img src="assets/icons/info-link.png" width="70%" alt="info-button">
+    </a>
+
+    <!-- Right -->
+    <a href="submission.html" class="submission">
+      <img src="assets/icons/submission-link.png" width="30%" alt="submission-button">
+    </a>
+
+    <!-- Bottom -->
+    <a href="#sec-2" class="prompt-scroll">
+      <img src="assets/icons/promtp link.png" width="30%" alt="prompt-down-button" class="promtScroll prompt-bounce">
+    </a>
+
+
+  <!-- SKINNER BOX SECTION -->
+  <section class="skinnerBox">
+
+  <!-- Text that will be changed -->
+  <p id="textDisplay"></p>
+
+  <section class="skinnerBox-buttons">
+    <!-- CORRECT button -->
+    <div class="correct-btn" onclick="changeText()"></div>
+
+    <!-- INcorrect button  -->
+    <div class="incorrect-btn" onclick="showError()"></div>
+    <!-- <div class="incorrect-btn" onclick="errorScreen()"></div> -->
+
+  </section>
+
+  <!-- error/red tint -->
+  <div id="error"></div>
+
+  </section>
+
+  <!-- JavaScript -->
+  <script src="js/SkinnerBox.js"></script>
+  <script src="js/Error.js"></script>
+
+</body>
+</html>
