@@ -18,7 +18,7 @@ function changeText() {
   let p9 = "I guess the main takeaway here is to recognize the intricacies and the play of elements behind a gaming addiction as they are often unapparent at first glance. <br><br> An addiction is frequently orchestrated against the benefit of the user for profit.";
   let p10 = `Gamers Anonymous serves as an outlet for users with gaming addiction to express themselves within a setting that’s understood to be for that sole purpose. <br><br> Since gaming addiction is often times
              heightened by an underlying issue, on this platform, users may find a place to speak anonymously about their reality in contrast to their virtual world. Others may also feel free to submit how they were able to overcome such issues. <br><br> It is important for the user to understand
-             that they are not alone.`;
+             that they are not alone.`; 
 
   // Changes paragraph each time the right button is clicked
   if (x.innerHTML === "") {
